@@ -2,6 +2,7 @@ const {createApp} = Vue;
 createApp({
     data(){
         return{
+            email:''
 
         }
     },
@@ -13,6 +14,8 @@ createApp({
             axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
     
             .then((risposta)=>{
+
+                this.email = risposta.data.response
 
                 console.log(risposta.data.response)
     
