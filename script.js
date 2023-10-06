@@ -3,7 +3,8 @@ createApp({
     data(){
         return{
             emails:[],
-            valore: 10
+            valore: 10,
+            counter: 0
         }
     },
 
@@ -20,13 +21,27 @@ createApp({
                 .then((risposta)=>{
     
                     this.emails.push(risposta.data.response);
+
+                    this.counter++;
+
+                    if(this.counter === this.valore){
+                        this.generazione = true;
+                    }
                 })
-    
+
+                
                 .catch((errore)=>{
                     console.log(errore)
                 });
             }
+            
+            
+        },
+    },
 
+    computed:{
+        generazione(){
+            return this.counter === this.valore;
         },
     },
 
