@@ -30,7 +30,7 @@
 
         <ul>
 
-            <li>{{emails}}</li>
+            <li v-for="email in emails" :key="email">{{email}}</li>
 
         </ul>
 

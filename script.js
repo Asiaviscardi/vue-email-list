@@ -2,7 +2,7 @@ const {createApp} = Vue;
 createApp({
     data(){
         return{
-            emails:'',
+            emails:[],
             valore: 10
         }
     },
@@ -19,7 +19,7 @@ createApp({
         
                 .then((risposta)=>{
     
-                    this.emails += risposta.data.response + ',';
+                    this.emails.push(risposta.data.response);
                 })
     
                 .catch((errore)=>{
