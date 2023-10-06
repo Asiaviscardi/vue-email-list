@@ -14,7 +14,7 @@ createApp({
     
             .then((risposta)=>{
 
-                console.log(risposta)
+                console.log(risposta.data.response)
     
             })
     
@@ -22,6 +22,10 @@ createApp({
                 console.log(errore)
             })
         }
+    },
+
+    mounted(){
+        this.getApi();
     }
 
 }).mount('#app')
