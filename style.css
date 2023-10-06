@@ -4,6 +4,17 @@
     box-sizing: border-box;
 }
 
+div{
+    height: 100vh;
+    background-color: azure;
+}
+
 li{
     text-align: center;
+    padding-top: 70px;
+    cursor: pointer;
+}
+
+li:hover{
+    color: blueviolet;
 }
